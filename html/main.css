@@ -1,0 +1,19 @@
+ *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+  }
+
+  html, body {
+        text-align: center;
+        height: auto;
+        background: #808080;
+  }
+
+  table {
+        margin: auto;
+        float: center;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+}
