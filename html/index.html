@@ -37,8 +37,8 @@ This is where the results turn up: <br/>
 
 <script>
 
-let delButton=document.querySelector('input');
-let deleteStudent=()=>{
+let deleteStudent=document.querySelector('input');
+let delButton=()=>{
         let id=document.getElementById('getId').value;
         fetch(baseURL+'delete?id='+id).then((resp)=>{alert("Student Deleted");
 }
