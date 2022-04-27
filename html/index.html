@@ -31,11 +31,21 @@ This is where the results turn up: <br/>
 <table id='tab1' bgcolor='silver'><br/>
 <tr><td>ID</td><td>Name</td><td>Email</td></tr>
 </table><br/>
-<label for='Id'>Type Id number for delete</label><br/>
-<input type='text' id='getId'>
-<button onClick="delButton()">Click Me</button>
+<input placeholder="Type Id number for delete" type='int' id='getId'>
+<button onClick="delButton()">Submit</button>
+
 
 <script>
+
+let delButton=document.querySelector('input');
+let deleteStudent=()=>{
+        let id=document.getElementById('getId').value;
+        fetch(baseURL+'delete?id='+id).then((resp)=>{alert("Student Deleted");
+}
+delButton.addEventListener("click", deleteStudent);
+</script>
+
+<!-- <script>
 
 let delButton=document.getElementById('getId');
 let deleteStudent=()=>{
@@ -43,7 +53,7 @@ let deleteStudent=()=>{
         fetch(baseURL+'delete?id='+id).then((resp)=>{alert("Student Deleted");
 }
 delButton.addEventListener("click", deleteStudent);
-</script>
+</script> -->
 
 
 </body>
