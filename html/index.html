@@ -36,7 +36,7 @@ This is where the results turn up: <br/>
 
 
 <script>
-
+let baseURL='https://wellington.dbsprojects.ie:8080/';
 let deleteStudent=document.querySelector('input');
 let delButton=()=>{
         let id=document.getElementById('getId').value;
@@ -44,7 +44,7 @@ let delButton=()=>{
       }
     );
   }
-delButton.addEventListener("click", deleteStudent);
+deleteStudent.addEventListener("click", delButton);
 </script>
 
 <!-- <script>
