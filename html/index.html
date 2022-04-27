@@ -37,10 +37,10 @@ This is where the results turn up: <br/>
 
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
-let deleteStudent=document.querySelector('input');
+let id=document.querySelector('input');
 let delButton=()=>{
-        let id=document.getElementById('getId').deleteStudent;
-        fetch(baseURL+'delete?id='+deleteStudent).then((resp)=>{alert("Student Deleted");
+        let deleteStudent=document.getElementById('getId').id;
+        fetch(baseURL+'delete?id='+id).then((resp)=>{alert("Student Deleted");
       }
     );
   }
