@@ -10,6 +10,11 @@
         background: white;
   }
 
+  header {
+        background: orange;
+        color: white;
+  }
+
   table {
         margin: auto;
         float: center;
