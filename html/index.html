@@ -40,7 +40,7 @@ Enter your details for registering on this website<br/>
   <input type="email" name="email" id="email"><br/>
 </form><br/>
 <button onClick="addButton('form')">Submit</button><br/>
-
+<br/>
 <input placeholder="Type Id number for delete" type='int' id='getId'>
 <button onClick="delButton('input')">Submit</button>
 
@@ -48,7 +48,7 @@ Enter your details for registering on this website<br/>
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
 
-// Add
+// Add function
 let name=document.getElementById('fname');
 let email=document.getElementById('email');
 let addButton=()=>{        
@@ -58,7 +58,7 @@ let addButton=()=>{
   }
 addButton.addEventListener("click", name, email);
 
-// Delete
+// Delete function
 let id=document.querySelector('input');
 let delButton=()=>{        
         fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");
