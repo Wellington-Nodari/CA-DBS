@@ -37,10 +37,10 @@ Enter your details for enrolling in this school<br/>
   <input placeholder='Full Name' type="text" name="fname" id="fname">
   <input placeholder='E-mail' type="email" name="email" id="email">
 </form>
-<button onClick="addButton('form')">Submit</button><br/>
+<button onClick="addStudent('form')">Submit</button><br/>
 <br/>
 <input placeholder="Type Id number for delete" type='int' id='getId'>
-<button onClick="delButton('input')">Submit</button>
+<button onClick="delStudent('input')">Submit</button>
 
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
@@ -48,7 +48,7 @@ let baseURL='https://wellington.dbsprojects.ie:8080/';
 // Add function
 let name=document.getElementById('fname');
 let email=document.getElementById('email');
-let addButton=()=>{        
+let addStudent=()=>{        
         fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then((resp)=>{alert("Student Added");
       }
     );
@@ -57,12 +57,12 @@ addButton.addEventListener("click", name, email);
 
 // Delete function
 let id=document.querySelector('input');
-let delButton=()=>{        
+let delStudent=()=>{        
         fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");
       }
     );
   }
-delButton.addEventListener("click", id);
+//delButton.addEventListener("click", id);
 </script>
 
 </body>
