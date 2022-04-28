@@ -44,8 +44,6 @@ Enter your details for enrolling in this school<br/>
 
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
-
-// Add function
 let name=document.getElementById('fname');
 let email=document.getElementById('email');
 let addStudent=()=>{        
@@ -55,7 +53,6 @@ let addStudent=()=>{
   }
 addStudent.addEventListener("click", name, email);
 
-// Delete function
 let id=document.getElementById('getId');
 let delStudent=()=>{        
         fetch(baseURL+'delete?id='+document.getElementById('getId').value).then((resp)=>{alert("Student Deleted");
