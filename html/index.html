@@ -26,27 +26,27 @@ let doIt=()=>{
 </script>
 </head>
 
-
-<header>
-  <h1>My School Enrollment Form</h1>
-</header>
-
+  <header>
+    <h1>My School Enrollment Form</h1>
+  </header>
+  
 <body>
-This is Students List <br/>
+  <p>This is Students List
 <button onClick="doIt()">Show</button><br/>
 <table id='tab1' bgcolor='silver'><br/>
 <tr><td>ID</td><td>Name</td><td>Email</td></tr>
 </table><br/>
-Enter your details for enrolling in this school<br/>
+<p>Enter your details for enrolling in this school<br/>
 
 <form id="register-form">
-  <input placeholder='Full Name' type="text" name="fname" id="fname">
+  <input placeholder='Full Name' type="text" name="fname" id="fname"><br/>
   <input placeholder='E-mail' type="email" name="email" id="email">
+  <button onClick="addStudent()">Submit</button><br/>
 </form>
-<button onClick="addStudent()">Submit</button><br/>
+
 <br/>
-Type Id number for delete a Student<br/>
-<input placeholder="Id number" type='number' id='getId'><br/>
+<p>Type Id number for delete a Student<br/>
+<input placeholder="Id number" type='number' id='getId'>
 <button onClick="delStudent()">Submit</button>
 
 <script>

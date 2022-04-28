@@ -5,7 +5,8 @@
   }
 
   html, body {
-        text-align: center;
+        margin-left: 10px; 
+        text-align: left;
         height: auto;
         background: white;
   }
@@ -13,7 +14,7 @@
   header {
         background: orange;
         color: white;
-  }
+}
 
   table {
         margin: auto;
@@ -22,5 +23,14 @@
         box-sizing: border-box;
         text-align: center;
         text-decoration-color: darkgray;
-}  
+        border-collapse: collapse;
+        width: 100%;
+}
 
+    th, td {
+      text-align: left;
+      padding: 8px;
+}
+
+    tr:nth-child(even) {background-color: #f2f2f2;}
+}  
