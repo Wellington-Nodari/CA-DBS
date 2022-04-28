@@ -37,10 +37,10 @@ Enter your details for enrolling in this school<br/>
   <input placeholder='Full Name' type="text" name="fname" id="fname">
   <input placeholder='E-mail' type="email" name="email" id="email">
 </form>
-<button onClick="addStudent('form')">Submit</button><br/>
+<button onClick="addStudent()">Submit</button><br/>
 <br/>
 <input placeholder="Type Id number for delete" type='int' id='getId'>
-<button onClick="delStudent('input')">Submit</button>
+<button onClick="delStudent()">Submit</button>
 
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
@@ -51,7 +51,6 @@ let addStudent=()=>{
       }
     );
   }
-addStudent.addEventListener("click", name, email);
 
 let id=document.getElementById('getId');
 let delStudent=()=>{        
@@ -59,7 +58,6 @@ let delStudent=()=>{
       }
     );
   }
-delStudent.addEventListener("click", id);
 </script>
 
 </body>
