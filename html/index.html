@@ -53,16 +53,16 @@ let addStudent=()=>{
       }
     );
   }
-addButton.addEventListener("click", name, email);
+addStudent.addEventListener("click", name, email);
 
 // Delete function
-let id=document.querySelector('input');
+let id=document.getElementById('input');
 let delStudent=()=>{        
-        fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");
+        fetch(baseURL+'delete?id='+document.getElementById('getId').value).then((resp)=>{alert("Student Deleted");
       }
     );
   }
-//delButton.addEventListener("click", id);
+delStudent.addEventListener("click", id);
 </script>
 
 </body>
