@@ -56,7 +56,7 @@ let addStudent=()=>{
 addStudent.addEventListener("click", name, email);
 
 // Delete function
-let id=document.getElementById('input');
+let id=document.getElementById('getId');
 let delStudent=()=>{        
         fetch(baseURL+'delete?id='+document.getElementById('getId').value).then((resp)=>{alert("Student Deleted");
       }
