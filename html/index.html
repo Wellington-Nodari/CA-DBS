@@ -61,22 +61,12 @@ let addStudent=()=>{
 
 let delStudent=()=>{ 
                                                                              
-  var message = document.getElementById("delButton");
-  message.innerHTML = "";
   let id=document.getElementById('getId').value;
-  try { 
-    if(id == "") alert("Insert a Id Number");
-    location.reload(true);
-  }
-  else (id !== ""){
-    fetch(baseURL+'delete?id='+document.getElementById('getId')).then((resp)=>{alert("Student Deleted");
+  
+  fetch(baseURL+'delete?id='+document.getElementById('getId')).then((resp)=>{alert("Student Deleted");
    }
   );
- }
-  catch(err) {
-    message.innerHTML = "Here's the error" + err;
-  }
-}
+ }  
 </script>
 
 </body>
