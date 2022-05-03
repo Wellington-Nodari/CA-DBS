@@ -60,12 +60,12 @@ let addStudent=()=>{
   }
 
 let delStudent=()=>{                                                                           
-  let id = document.getElementById("getId").value;
+  let id = document.getElementById("getId");
     
   try {
     if(id == "") throw 'Insert an Id number'; 
     
-    else(fetch(baseURL+'delete?id='+document.getElementById('getId')).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
+    else(fetch(baseURL+'delete?id='+document.getElementById('getId').value).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
    }
   )
  );
