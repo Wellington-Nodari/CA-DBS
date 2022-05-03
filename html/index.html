@@ -60,22 +60,20 @@ let addStudent=()=>{
   }
 
 let delStudent=()=>{                                                                           
-  const entry = document.getElementById("delbutton");
-  entry.innerHTML = "";
-
   let id = document.getElementById("getId").value;
-  fetch(baseURL+'delete?id='+document.getElementById('getId').value).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
+    
+  try {
+    if(id == "") throw 'Insert an Id number'; 
+    
+    else(fetch(baseURL+'delete?id='+document.getElementById('getId')).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
    }
   );
-  
-  try {
-    if(id == "") throw 'Insert an Id number';   
-   } 
+ )
+} 
   catch(err) {
-    message.innerHTML = "There's an error" + err;
+    alert("There's an error - " + err);
     }
 }  
-
 </script>
 
 </body>
