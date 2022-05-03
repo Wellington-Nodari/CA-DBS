@@ -68,12 +68,13 @@ let delStudent=()=>{
   
     else(fetch(baseURL+'delete?id='+document.getElementById('getId').value).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
    }
-  )
- }
+  );
+ 
   catch(err) {
     message.innerHTML = "There's an error" + err;
+    }
   } 
- } 
+} 
 </script>
 
 </body>
