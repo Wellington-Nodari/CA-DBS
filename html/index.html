@@ -54,7 +54,7 @@ let baseURL='https://wellington.dbsprojects.ie:8080/';
 let name=document.getElementById('fname');
 let email=document.getElementById('email');
 let addStudent=()=>{        
-        fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then((resp)=>{alert("Student Added");
+        fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then(location.reload(true)).then((resp)=>{alert("Student Added");
       }
     );
    location.reload(true);
@@ -62,10 +62,9 @@ let addStudent=()=>{
 
 let delStudent=()=>{                                                                             
   let id=document.getElementById('getId');  
-  fetch(baseURL+'delete?id='+document.getElementById('getId').value).then((resp)=>{alert("Student Deleted");
+  fetch(baseURL+'delete?id='+document.getElementById('getId').value).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
    }
   );
-  location.reload(true);
  }  
 </script>
 
