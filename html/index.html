@@ -51,7 +51,7 @@ let doIt=()=>{
   <div>
     <p>Enter the Id number for update your details<br/>
     <form id="update-form">
-      <input placeholder='Id Number' type="number" name="updId" id="updId"><br/>
+      <input placeholder='Id Number' type="number" name="updId" id="updId" min="1"><br/>
       <input placeholder='Full Name' type="text" name="updName" id="updName"><br/>
       <input placeholder='E-mail' type="email" name="updEmail" id="updEmail">
       <button onClick="updStudent()">Submit</button><br/>
@@ -60,7 +60,7 @@ let doIt=()=>{
 
   <div>
     <p>Type Id number for delete a Student<br/>
-    <input placeholder="Id number" type='number' id='getId'>
+    <input placeholder="Id number" type='number' id='getId' min="1">
     <button onClick="delStudent()" id='updButton'>Submit</button>
   </div>
 
