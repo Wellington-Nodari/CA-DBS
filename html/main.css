@@ -34,3 +34,20 @@
 
     tr:nth-child(even) {background-color: #f2f2f2;}
 }  
+
+button {
+  background-color: #f2f2f2;  /* 4CAF50 Green */ 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+  float: auto;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
