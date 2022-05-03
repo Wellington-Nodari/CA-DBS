@@ -64,7 +64,7 @@ let delStudent=()=>{
   message.innerHTML = "";
   let id = document.getElementById("getId").value;
   try {
-    if(id == "").alert('Insert an Id number');  
+    if(id == "") alert('Insert an Id number');  
   
     else(fetch(baseURL+'delete?id='+document.getElementById('getId').value).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
    }
