@@ -52,7 +52,7 @@ button:hover {
   background-color: darkblue;
 }
 
-#updButton .button:hover {
+#updButton:hover {
   background-color: #ff6347;
 }
 
