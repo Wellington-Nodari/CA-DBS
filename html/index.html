@@ -11,7 +11,7 @@ let doIt=()=>{
   let rows=tab1.getElementsByTagName('tr');
   fetch('https://wellington.dbsprojects.ie:8080/')
     .then(response => response.json())
-    .then(data=>data.Results.forEach(  //.slice(0,3)
+    .then(data=>data.Results.forEach(//.slice(0,3)
       x=>{
         let newRow=rows[0].cloneNode(true);
         let divs=newRow.getElementsByTagName('td');
@@ -21,7 +21,7 @@ let doIt=()=>{
         tab1.appendChild(newRow);
       }
     )
-  ); 
+  ).then(location.reload(true)); 
 }
 </script>
 </head>
@@ -47,7 +47,7 @@ let doIt=()=>{
 <br/>
 <p>Type Id number for delete a Student<br/>
 <input placeholder="Id number" type='number' id='getId'>
-<button onClick="delStudent()" id='delButton'>Submit</button>
+<button onClick="delStudent()">Submit</button>
 
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
