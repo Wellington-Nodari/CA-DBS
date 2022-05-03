@@ -47,7 +47,7 @@ let doIt=()=>{
 <br/>
 <p>Type Id number for delete a Student<br/>
 <input placeholder="Id number" type='number' id='getId'>
-<button onClick="delStudent()">Submit</button>
+<button onClick="delStudent()" id='delButton'>Submit</button>
 
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
@@ -59,12 +59,24 @@ let addStudent=()=>{
     );
   }
 
-let id=document.getElementById('getId');
-let delStudent=()=>{        
-        fetch(baseURL+'delete?id='+document.getElementById('getId').value).then((resp)=>{alert("Student Deleted");
-      }
-    );
+let delStudent=()=>{ 
+                                                                             
+  var message = document.getElementById("delButton");
+  message.innerHTML = "";
+  let id=document.getElementById('getId').value;
+  try { 
+    if(id == "") alert("insert a id number");
+    location.reload(true);
   }
+    catch(err) {
+      message.innerHTML = "Input is " + err;
+  }
+  if(id != ""){
+    fetch(baseURL+'delete?id='+document.getElementById('getId')).then((resp)=>{alert("Student Deleted");
+   }
+  );
+ }
+}
 </script>
 
 </body>
