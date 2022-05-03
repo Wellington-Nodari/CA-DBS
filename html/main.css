@@ -49,5 +49,10 @@ button {
 }
 
 button:hover {
-  background-color: #3e8e41;
+  background-color: darkblue;
 }
+
+#updButton .button:hover {
+  background-color: #ff6347;
+}
+
