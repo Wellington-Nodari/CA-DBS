@@ -31,30 +31,38 @@ let doIt=()=>{
   </header>
   
 <body>
-  <p>This is Students List
-<button onClick="doIt()">Show</button><br/>
-<table id='tab1' bgcolor='silver'><br/>
-<tr><td>ID</td><td>Name</td><td>Email</td></tr>
-</table><br/>
+  <div>
+    <p>This is Students List
+    <button onClick="doIt()">Show</button><br/>
+    <table id='tab1' bgcolor='silver'><br/>
+    <tr><td>ID</td><td>Name</td><td>Email</td></tr>
+    </table><br/>
+  </div>
 
-<p>Enter your details for enrolling in this school<br/>
-<form id="register-form">
-  <input placeholder='Full Name' type="text" name="fname" id="fname"><br/>
-  <input placeholder='E-mail' type="email" name="email" id="email">
-  <button onClick="addStudent()">Submit</button><br/>
-</form><br/>
+  <div>
+    <p>Enter your details for enrolling in this school<br/>
+    <form id="register-form">
+      <input placeholder='Full Name' type="text" name="fname" id="fname"><br/>
+      <input placeholder='E-mail' type="email" name="email" id="email">
+      <button onClick="addStudent()">Submit</button><br/>
+    </form>
+  </div>
+  
+  <div>
+    <p>Enter the Id number for update your details<br/>
+    <form id="update-form">
+      <input placeholder='Id Number' type="number" name="updId" id="updId"><br/>
+      <input placeholder='Full Name' type="text" name="updName" id="updName"><br/>
+      <input placeholder='E-mail' type="email" name="updEmail" id="updEmail">
+      <button onClick="updStudent()">Submit</button><br/>
+    </form>
+  </div>
 
-<p>Enter the Id number for update your details<br/>
-  <form id="update-form">
-    <input placeholder='Id Number' type="number" name="updId" id="updId"><br/>
-    <input placeholder='Full Name' type="text" name="updName" id="updName"><br/>
-    <input placeholder='E-mail' type="email" name="updEmail" id="updEmail">
-    <button onClick="updStudent()">Submit</button><br/>
-  </form><br/>
-
-<p>Type Id number for delete a Student<br/>
-<input placeholder="Id number" type='number' id='getId'>
-<button onClick="delStudent()">Submit</button>
+  <div>
+    <p>Type Id number for delete a Student<br/>
+    <input placeholder="Id number" type='number' id='getId'>
+    <button onClick="delStudent()">Submit</button>
+  </div>
 
 <script>
 let baseURL='https://wellington.dbsprojects.ie:8080/';
