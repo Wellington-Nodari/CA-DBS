@@ -36,15 +36,22 @@ let doIt=()=>{
 <table id='tab1' bgcolor='silver'><br/>
 <tr><td>ID</td><td>Name</td><td>Email</td></tr>
 </table><br/>
-<p>Enter your details for enrolling in this school<br/>
 
+<p>Enter your details for enrolling in this school<br/>
 <form id="register-form">
   <input placeholder='Full Name' type="text" name="fname" id="fname"><br/>
   <input placeholder='E-mail' type="email" name="email" id="email">
   <button onClick="addStudent()">Submit</button><br/>
-</form>
+</form><br/>
 
-<br/>
+<p>Enter the Id number for update your details<br/>
+  <form id="update-form">
+    <input placeholder='Id Number' type="number" name="updId" id="updId"><br/>
+    <input placeholder='Full Name' type="text" name="updName" id="updName"><br/>
+    <input placeholder='E-mail' type="email" name="updEmail" id="updEmail">
+    <button onClick="updStudent()">Submit</button><br/>
+  </form><br/>
+
 <p>Type Id number for delete a Student<br/>
 <input placeholder="Id number" type='number' id='getId'>
 <button onClick="delStudent()">Submit</button>
@@ -68,7 +75,27 @@ let email=document.getElementById('email').value;
   catch(err) {
     alert("There's an error - " + err);
     }
-} 
+}
+
+  let updStudent=()=>{
+    let id = document.getElementById("updId").value;
+    let name=document.getElementById('updName').value;
+    let email=document.getElementById('updEmail').value;
+
+    try {
+      if(id == "") throw 'Please insert an Id number';
+      if(name == "") throw 'Please insert your name';
+      if(email == "") throw 'Please insert your email';
+
+      else(fetch(baseURL+'update?id='+document.getElementById('updId').value+'&name='+document.getElementById('updName').value+'&email='+document.getElementById('updEmail').value).then(location.reload(true)).then((resp)=>{alert("Details Updated with Sucess!");
+     }
+    )
+   );
+  } 
+    catch(err) {
+      alert("There's an error - " + err);
+      }
+  }
 
 let delStudent=()=>{                                                                           
   let id = document.getElementById("getId").value;
