@@ -57,6 +57,7 @@ let addStudent=()=>{
         fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then((resp)=>{alert("Student Added");
       }
     );
+   location.reload(true);
   }
 
 let delStudent=()=>{                                                                             
@@ -64,6 +65,7 @@ let delStudent=()=>{
   fetch(baseURL+'delete?id='+document.getElementById('getId').value).then((resp)=>{alert("Student Deleted");
    }
   );
+  location.reload(true);
  }  
 </script>
 
