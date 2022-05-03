@@ -50,20 +50,30 @@ let doIt=()=>{
 <button onClick="delStudent()">Submit</button>
 
 <script>
+let addStudent=()=>{
 let baseURL='https://wellington.dbsprojects.ie:8080/';
-let name=document.getElementById('fname');
-let email=document.getElementById('email');
-let addStudent=()=>{        
-        fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then(location.reload(true)).then((resp)=>{alert("Student Added");
-      }
-    );
-  }
+let name=document.getElementById('fname').value;
+let email=document.getElementById('email').value;
+  
+  try {
+    if(name == "") throw 'Please insert your name';
+    if(email == "") throw 'Please insert your email';
+    
+    else(fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then(location.reload(true)).then((resp)=>{alert("Student Added");
+   }
+  )
+ );
+} 
+  catch(err) {
+    alert("There's an error - " + err);
+    }
+} 
 
 let delStudent=()=>{                                                                           
   let id = document.getElementById("getId").value;
     
   try {
-    if(id == "") throw 'Insert an Id number'; 
+    if(id == "") throw 'Please insert an Id number'; 
     
     else(fetch(baseURL+'delete?id='+document.getElementById('getId').value).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
    }
