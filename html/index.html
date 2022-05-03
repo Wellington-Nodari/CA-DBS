@@ -64,14 +64,13 @@ let delStudent=()=>{
   entry.innerHTML = "";
 
   let id = document.getElementById("getId").value;
-  try {
-    if(id == "") alert('Insert an Id number');  
+  fetch(baseURL+'delete?id='+document.getElementById('getId').value).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
+   }
+  );
   
-    else(fetch(baseURL+'delete?id='+document.getElementById('getId')).then(location.reload(true)).then((resp)=>{alert("Student Deleted");
-    }
-  )
-);
-} 
+  try {
+    if(id == "") throw 'Insert an Id number';   
+   } 
   catch(err) {
     message.innerHTML = "There's an error" + err;
     }
