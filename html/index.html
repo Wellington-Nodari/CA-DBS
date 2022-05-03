@@ -59,11 +59,9 @@ let addStudent=()=>{
     );
   }
 
-let delStudent=()=>{ 
-                                                                             
-  let id=document.getElementById('getId').value;
-  
-  fetch(baseURL+'delete?id='+document.getElementById('getId')).then((resp)=>{alert("Student Deleted");
+let delStudent=()=>{                                                                             
+  let id=document.getElementById('getId');  
+  fetch(baseURL+'delete?id='+document.getElementById('getId').value).then((resp)=>{alert("Student Deleted");
    }
   );
  }  
