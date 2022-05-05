@@ -49,10 +49,11 @@ button {
 }
 
 button:hover {
-  background-color: darkblue;
+  background-color: darkgray;
+  text-decoration-color: silver;
 }
 
-#updButton:hover {
+#dellButton:hover {
   background-color: #ff6347;
 }
 
