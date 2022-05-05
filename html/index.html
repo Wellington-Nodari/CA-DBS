@@ -93,7 +93,7 @@ let email=document.getElementById('email').value;
     try {
       if(id == "") throw 'Please insert an Id number';
       if(name == "") throw 'Please insert your name';
-      if(email == "") throw 'Please insert an email, you have to use /'@'/.';
+      if(email == "") throw 'Please fix your email address.';
       if(email.excludes('@')){
         break;
       } throw 'Please insert your email';
