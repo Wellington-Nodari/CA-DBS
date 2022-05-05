@@ -50,7 +50,7 @@ button {
 
 button:hover {
   background-color: darkgray;
-  text-decoration-color: silver;
+  text-decoration-color: white;
 }
 
 #dellButton:hover {
