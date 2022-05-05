@@ -76,7 +76,7 @@ let email=document.getElementById('email').value;
     if(email == "") throw 'Please insert your email';
     if(email.excludes('@')){
         break;
-      } throw 'Please fix your email address.';
+      };
     
     else(fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then(location.reload(true)).then((resp)=>{alert("Student Added");
    }
@@ -99,7 +99,7 @@ let email=document.getElementById('email').value;
       if(email == "") throw 'Please insert your email';
       if(email.excludes('@')){
         break;
-      } throw 'Please fix your email address.';
+      };
 
       else(fetch(baseURL+'update?id='+document.getElementById('updId').value+'&name='+document.getElementById('updName').value+'&email='+document.getElementById('updEmail').value).then(location.reload(true)).then((resp)=>{alert("Details Updated with Sucess!");
      }
