@@ -97,7 +97,7 @@ let email=document.getElementById('email').value;
       if(id == "") throw 'Please insert an Id number';
       if(name == "") throw 'Please insert your name';
       if(email == "") throw 'Please insert your email';
-      if(email.excludes('@')){
+      else if(email.excludes('@')){
         break;
       };
 
