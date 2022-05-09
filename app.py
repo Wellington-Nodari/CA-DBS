@@ -19,7 +19,7 @@ mysql.init_app(app)
 def fetch():
   id = request.args.get('id')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''SELECT * FROM students WHERE studenteID=?;'''
+  s='''SELECT * FROM students WHERE studentID=?;'''
   cur.execute(s)
   mysql.connection.commit()
   return '{"Result":"Success"}'
