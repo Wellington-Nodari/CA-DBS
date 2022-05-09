@@ -14,7 +14,6 @@ app.config['MYSQL_DB'] = 'student'
 app.config['MYSQL_HOST'] = 'localhost' #for now
 mysql.init_app(app)
 
-
 @app.route("/add") #Add Student
 def add():
   name = request.args.get('name')
@@ -31,7 +30,7 @@ def update():
   email = request.args.get('email')
   id = int(request.args.get('id'))
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''UPDATE students SET studentName='{}', email='{}' WHERE studentID='{}';'''.format(name, email, id)
+  s='''UPDATE students SET studentName='{}', email='{}' WHERE studentID='{}';'''.format(name,email,id)
   cur.execute(s)
   mysql.connection.commit()
 #  s='''UPDATE students SET studentName=?, email=? WHERE studentID=?;'''
