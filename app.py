@@ -15,16 +15,6 @@ app.config['MYSQL_HOST'] = 'localhost' #for now
 mysql.init_app(app)
 
 
-@app.route("/fetch") #Add Student
-def fetch():
-  id = request.args.get('id')
-  cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''SELECT * FROM students WHERE studentID='{}';'''.format(id)
-  cur.execute(s)
-  mysql.connection.commit()
-  return '{"Result":"Success"}'
-
-
 @app.route("/add") #Add Student
 def add():
   name = request.args.get('name')
