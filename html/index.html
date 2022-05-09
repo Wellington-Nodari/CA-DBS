@@ -74,6 +74,7 @@ let email=document.getElementById('email').value;
   try {
     if(name == "") throw 'Please insert your name';
     if(email == "") throw 'Please insert your email';
+    if(eval(email));
         
     else(fetch(baseURL+'add?name='+document.getElementById('fname').value+'&email='+document.getElementById('email').value).then(location.reload(true)).then((resp)=>{alert("Student Added");
    }
@@ -94,6 +95,8 @@ let email=document.getElementById('email').value;
       if(id == "") throw 'Please insert an Id number';
       if(name == "") throw 'Please insert your name';
       if(email == "") throw 'Please insert your email';
+      if(eval(email));
+
       
       else(fetch(baseURL+'update?id='+document.getElementById('updId').value+'&name='+document.getElementById('updName').value+'&email='+document.getElementById('updEmail').value).then(location.reload(true)).then((resp)=>{alert("Details Updated with Sucess!");
      }
