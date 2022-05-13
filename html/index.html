@@ -9,7 +9,7 @@
 let doIt=()=>{
   let tab=document.getElementById("tab1");
   let rows=tab1.getElementsByTagName('tr');
-  fetch('https://wellington.dbsprojects.ie:8080/')
+  fetch('https://wellington.dbsprojects.ie:8080/') 
     .then(response => response.json())
     .then(data=>data.Results.forEach(//.slice(0,3)
       x=>{
@@ -23,6 +23,7 @@ let doIt=()=>{
     )
   ); 
 }
+
 </script>
 </head>
 
